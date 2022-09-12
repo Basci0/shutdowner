@@ -1,6 +1,6 @@
 # shutdowner
 
-### A simple tool for shutting down your pc. 
+###### A simple tool for shutting down your pc. Made for fun.
 
 - Install
 ```
