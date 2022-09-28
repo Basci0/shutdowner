@@ -11,8 +11,8 @@ go install github.com/Basci0/shutdowner/src
 ```
 github.com/Basci0/shutdowner/src
 ```
-To do 
+#### To do 
 
-- [ ] Create the GUI for this project
+- [ ] Create the GUI for this project(with fyne)
 - [ ] git cmd 
 - [ ] fix cancell bug 
