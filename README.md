@@ -13,6 +13,6 @@ github.com/Basci0/shutdowner/src
 ```
 To do 
 
-[ ] Create the GUI for this project
-[ ] git cmd 
-[ ] fix cancell bug 
+[ ]Create the GUI for this project
+[ ]git cmd 
+[ ]fix cancell bug 
