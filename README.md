@@ -4,7 +4,7 @@
 
 - Install
 ```
-go install github.com/Basci0/shutdowner/src
+go get github.com/Basci0/shutdowner/src
 ```
 
 - Run
