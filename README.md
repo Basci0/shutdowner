@@ -9,10 +9,10 @@ go get github.com/Basci0/shutdowner/src
 
 - Run
 ```
-github.com/Basci0/shutdowner/src
+go build github.com/Basci0/shutdowner/src
 ```
 #### To do 
 
-- [ ] Create the GUI for this project(with fyne)
+- [ ] Create the TUI with pterm, or bubbletea
 - [ ] git cmd 
 - [ ] fix cancell bug 
