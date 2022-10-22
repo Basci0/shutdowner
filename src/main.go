@@ -5,7 +5,6 @@ import (
 	"os/exec"
 	"strings"
 	"time"
-	//"time"
 )
 
 func main() {
