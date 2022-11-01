@@ -13,6 +13,5 @@ go run "github.com/Basci0/shutdowner@latest"
 ```
 #### To do 
 
-- [ ] Create the TUI with pterm, or bubbletea
-- [ ] git cmd 
-- [ ] fix cancell bug 
+- [x] Create the TUI with pterm, or bubbletea
+- [ ] Confirm selection
