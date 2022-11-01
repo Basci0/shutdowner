@@ -1,46 +1,50 @@
 package main
 
 import (
-	"fmt"
 	"os/exec"
-
+	"time"
 	"github.com/pterm/pterm"
 )
 
-func shutdown() {
-	if err := exec.Command("cmd", "/C", "shutdown", "/s").Run(); err != nil {
-		fmt.Println("Failed to shutdown:", err)
-	}
-
-}
-func restart() {
-	if err := exec.Command("cmd", "/C", "shutdown", "/r"); err != nil {
-		fmt.Println(err)
-	}
-}
-
 func main() {
-	//	options := []string{"Shutdown", "Restart"}
 
-	//switch options{
-	//case "Shutdown":
-
-	//case "Restart":
-	//	exec.Command("cmd", "/C", "shutdown", "/r")
-	//}
-
-	a, _ := pterm.DefaultInteractiveMultiselect.
+	optionsSelected, _ := pterm.DefaultInteractiveMultiselect.
 		WithOptions([]string{"shutdown", "restart"}).
 		Show()
-	//confirm for leaving a, _ := pterm.DefaultInteractiveConfirm.Show()
 
 	pterm.DefaultSpinner.Start()
 
-	pterm.Info.Println("Updating the system..")
-	pterm.Info.Println("Waiting for a answer..")
+	switch optionsSelected[0] {
+	case "shutdown":
+		time.Sleep(1 * time.Second)
+		pterm.Info.Println("Updating the drivers..")
 
-	pterm.DefaultSpinner.Stop()
-	pterm.Info.Println("%T", a)
-	shutdown()
+		time.Sleep(1 * time.Second)
+		pterm.Info.Println("Searching for errors ..")
+		time.Sleep(1 * time.Second)
+		pterm.Info.Println("Shutting down..")
+
+		pterm.DefaultSpinner.Stop()
+
+		if err := exec.Command("cmd", "/C", "shutdown", "/s").Run(); err != nil {
+			pterm.Error.Println("Failed to shutdown:", err)
+		}
+		pterm.DefaultSpinner.Start()
+
+	case "restart":
+		time.Sleep(1 * time.Second)
+		pterm.Info.Println("Updating the drivers..")
+
+		time.Sleep(1 * time.Second)
+		pterm.Info.Println("Searching for errors ..")
+		time.Sleep(1 * time.Second)
+		pterm.Info.Println("Restarting..")
+		pterm.DefaultSpinner.Stop()
+
+		if err := exec.Command("cmd", "/C", "shutdown", "/r").Run(); err != nil {
+			pterm.Error.Println("Failed to restart:", err)
+		}
+	}
+
 }
 
