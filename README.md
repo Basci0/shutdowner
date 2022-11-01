@@ -1,6 +1,6 @@
 # shutdowner
 
-### A simple tool for shutting down your pc. Made for fun with pterm.
+A simple tool for shutting down your pc. Made for fun with pterm.
 
 - Install
 ```
