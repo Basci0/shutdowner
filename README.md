@@ -4,12 +4,12 @@
 
 - Install
 ```
-go get github.com/Basci0/shutdowner/src
+go install "github.com/Basci0/shutdowner@latest"
 ```
 
 - Run
 ```
-go build github.com/Basci0/shutdowner/src
+go run "github.com/Basci0/shutdowner@latest"
 ```
 #### To do 
 
